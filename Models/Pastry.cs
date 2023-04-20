@@ -7,5 +7,13 @@ namespace PierresBakery.Models
     {
       Quantity = quantity;
     }
+
+    public int CalculatePrice()
+    {
+      int freePastries = Quantity / 3;
+      int paidPastries = Quantity - freePastries;
+      int price = paidPastries * 2;
+      return price;
+    }
   }
 }
